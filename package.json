@@ -8,7 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:ci": "ng build --configuration development",
-    "test:ci": "ng test --watch false --browsers ChromeHeadless --code-coverage"
+    "test:ci": "ng test --watch false --browsers ChromeHeadless --code-coverage",
+    "e2e": "ng e2e",
+    "e2e:ci": "ng e2e --headless true --watch false",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --coverage true"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +32,7 @@
     "@angular-devkit/build-angular": "~12.2.0",
     "@angular/cli": "~12.2.0",
     "@angular/compiler-cli": "~12.2.0",
+    "@cypress/schematic": "^1.6.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
@@ -36,6 +41,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "cypress": "latest"
   }
 }
